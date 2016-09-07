@@ -1,0 +1,50 @@
+body {
+  background-color: $bg-color;
+  color: $accent;
+  font-family: 'Arial';
+}
+
+.tweet-list {
+  //width: 33%;
+  padding: 0 40px;
+  margin-top: 20px;
+  //margin-left: 33%;
+  border-left: 1px solid $accent;
+  border-right: 1px solid $accent;
+
+  .tweets {
+    list-style: none;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+      color: $link-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:visited {
+        color: $link-color;
+      }
+
+      &:active {
+        color: $link-color;
+        text-decoration: underline;
+      }
+    }
+
+    li {
+      .tweet {}
+      .timePosted {}
+
+      .interact {
+        text-align: right;
+
+        a {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
