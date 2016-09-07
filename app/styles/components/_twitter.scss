@@ -1,16 +1,11 @@
-body {
-  background-color: $bg-color;
-  color: $accent;
-  font-family: 'Arial';
-}
-
 .tweet-list {
+  color: $accent-1;
   //width: 33%;
   padding: 0 40px;
   margin-top: 20px;
   //margin-left: 33%;
-  border-left: 1px solid $accent;
-  border-right: 1px solid $accent;
+  border-left: 1px solid $accent-1;
+  border-right: 1px solid $accent-1;
 
   .tweets {
     list-style: none;
@@ -18,18 +13,18 @@ body {
 
     a {
       text-decoration: none;
-      color: $link-color;
+      color: $accent-1;
 
       &:hover {
         text-decoration: underline;
       }
 
       &:visited {
-        color: $link-color;
+        color: $accent-1;
       }
 
       &:active {
-        color: $link-color;
+        color: $accent-1;
         text-decoration: underline;
       }
     }

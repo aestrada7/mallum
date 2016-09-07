@@ -2,7 +2,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     watch: {
       css: {
-        files: ['app/styles/**.scss'],
+        files: ['app/styles/**/*.scss'],
         tasks: ['sass'],
         options: {
           spawn: false

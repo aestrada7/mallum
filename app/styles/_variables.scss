@@ -1,8 +1,59 @@
+// Colors
 $white: #fff;
+$black: #000;
 $red: #aa0000;
 $purple: #653364;
+$dark-purple: #432242;
 
-$bg-color: $white;
-$link-color: $red;
-$accent: $red;
+// Mallum Colors
+$accent-1: $red;
 $accent-2: $purple;
+$accent-3: $dark-purple;
+
+// Text colors
+$text-color: #222222;
+$text-color-medium: #444444;
+$text-color-light: #666666;
+$text-color-xlight: #999999;
+$text-color-inverse: #e8e8e8;
+$text-color-white: $white;
+
+// Text sizes
+$font-size-extra-small: 10px;
+$font-size-small: 12px;
+$font-size-normal: 14px;
+$font-size-medium: 16px;
+$font-size-large: 18px;
+$font-size-xlarge: 24px;
+$font-size-xxlarge: 36px;
+
+// Font weights
+$weight-light: 300;
+$weight-normal: 400;
+$weight-semi-bold: 500;
+$weight-bold: 600;
+$weight-extra-bold: 700;
+
+// Fonts
+$font-family-sans-serif: 'Helvetica';
+$font-family-serif: 'Georgia';
+
+// Background colors
+$background-white: $white;
+$background-light: #e8e8e8;
+$background-semi-light: #d2d2d2;
+$background-medium: #999999;
+$background-inverse-light: #444444;
+$background-inverse: #222222;
+$background-pitch-black: $black;
+
+// Border colors
+$border-color-light: #f9f9f9;
+$border-color-semi-light: #d4d4d4;
+$border-color-medium: #a9a9a9;
+$border-color-inverse: #333333;
+$border-color-pitch-black: #202020;
+
+// Transitions
+$transition-time: 350ms;
+$global-transition: #{$transition-time} ease-in;
