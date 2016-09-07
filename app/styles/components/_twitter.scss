@@ -1,15 +1,22 @@
 .tweet-list {
   color: $accent-1;
-  //width: 33%;
-  padding: 0 40px;
-  margin-top: 20px;
-  //margin-left: 33%;
+  padding: 0;
+  margin-top: rem-calc(20);
   border-left: 1px solid $accent-1;
   border-right: 1px solid $accent-1;
+
+  @media #{$medium-up} {
+    padding: rem-calc(0 40);
+  }
 
   .tweets {
     list-style: none;
     padding: 0;
+    margin: rem-calc(20);
+
+    @media #{$medium-up} {
+      margin: 0;
+    }
 
     a {
       text-decoration: none;
@@ -30,14 +37,23 @@
     }
 
     li {
+      .user {
+        span:nth-child(2) {
+          display: none;
+        }
+      }
+
       .tweet {}
-      .timePosted {}
+      .timePosted {
+        text-align: $opposite-direction;
+        font-size: $font-size-small;
+      }
 
       .interact {
-        text-align: right;
+        text-align: $opposite-direction;
 
         a {
-          padding-right: 10px;
+          padding-#{$opposite-direction}: rem-calc(10);
         }
       }
     }

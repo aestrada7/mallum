@@ -1,0 +1,68 @@
+main-menu {
+  transition: all $global-transition;
+  @include flex-position(center, space-around);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  margin: 0;
+  padding-top: rem-calc(40);
+  padding-bottom: rem-calc(40);
+  will-change: background-color, padding-top, padding-bottom;
+  z-index: 999;
+
+  &.scrolled {
+    position: fixed;
+    background-color: $background-inverse-light;
+    padding-top: rem-calc(10);
+    padding-bottom: rem-calc(10);
+  }
+
+  .menu-item {
+    a {
+      transition: all $global-transition;
+      color: $text-color-inverse;
+      border-bottom: 1px solid transparent;
+      padding-bottom: rem-calc(5);
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      will-change: border-bottom, padding-bottom;
+
+      &:hover {
+        color: $text-color-white;
+        padding-bottom: 0;
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+}
+
+.splash {
+  background-image: url('../img/header-bg.jpg');
+  width: 100%;
+  height: rem-calc(300);
+
+  @media #{$medium-up} {
+    height: rem-calc(600);
+  }
+
+  .header-text {
+    margin: 0;
+    padding-top: rem-calc(110);
+    width: 100%;
+    color: $text-color-white;
+    font-size: $font-size-large;
+    text-align: center;
+
+    @media #{$medium-up} {
+      padding-top: rem-calc(170);
+      font-size: $font-size-xlarge;
+    }
+  }
+
+  .button-container {
+    padding-top: rem-calc(50);
+    text-align: center;
+  }
+}

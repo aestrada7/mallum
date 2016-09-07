@@ -1,0 +1,101 @@
+@mixin display-flex($is-important: null) {
+  display: -ms-flexbox $is-important;
+  display: -webkit-flex $is-important;
+  display: flex $is-important;
+}
+
+@mixin flex-justify-content($justify-content) {
+  justify-content: $justify-content;
+  -webkit-justify-content: $justify-content;
+
+  @if($justify-content == space-around) {
+    -ms-flex-pack: distribute;
+  } @else if($justify-content == space-between) {
+    -ms-flex-pack: justify;
+  } @else if($justify-content == flex-end) {
+    -ms-flex-pack: end;
+  } @else if($justify-content == flex-start) {
+    -ms-flex-pack: start;
+  } @else {
+    -ms-flex-pack: $justify-content;
+  }
+}
+
+@mixin flex-align-items($align-items) {
+  align-items: $align-items;
+  -webkit-align-items: $align-items;
+
+  @if($align-items == flex-end) {
+    -ms-flex-align: end;
+  } @else if($align-items == flex-start) {
+    -ms-flex-align: start;
+  } @else {
+    -ms-flex-align: $align-items;
+  }
+}
+
+@mixin flex-align-self($align-self) {
+  align-self: $align-self;
+  -webkit-align-self: $align-self;
+
+  @if($align-self == flex-start) {
+    -ms-flex-item-align: start;
+  } @else if($align-self == flex-end) {
+    -ms-flex-item-align: end;
+  } @else {
+    -ms-flex-item-align: $align-self;
+  }
+}
+
+@mixin flex-position($align-items, $justify-content) {
+  @include display-flex();
+  @include flex-justify-content($justify-content);
+  @include flex-align-items($align-items);
+}
+
+@mixin flex-wrap($wrap) {
+  flex-wrap: $wrap;
+  -webkit-flex-wrap: $wrap;
+
+  @if($wrap = nowrap) {
+    -ms-flex-wrap: none;
+  } @else {
+    -ms-flex-wrap: $wrap;
+  }
+}
+
+@mixin flex($fg: 1, $fs: null, $fb: null) {
+  $fg-boxflex: $fg;
+
+  @if type-of($fg) == 'list' {
+    $fg-boxflex: nth($fg, 1);
+  }
+
+  -webkit-box-flex: $fg-boxflex;
+  -webkit-flex: $fg $fs $fb;
+  -moz-box-flex: $fg-boxflex;
+  -moz-flex: $fg $fs $fb;
+  -ms-flex: $fg $fs $fb;
+  flex: $fg $fs $fb;
+}
+
+@mixin flex-direction($value: row) {
+  @if $value == row-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+  } @else if $value == column {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+  } @else if $value == column-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+  } @else {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+  }
+  
+  -webkit-flex-direction: $value;
+  -moz-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}

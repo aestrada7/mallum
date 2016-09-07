@@ -3,3 +3,16 @@ body {
   background-color: $background-white;
   font-family: $font-family-sans-serif;
 }
+
+button {
+  &.outline {
+    &.accent-1 {
+      border: 2px solid $accent-1;
+      background-color: transparent;
+
+      &:hover {
+        background-color: $background-inverse-light;
+      }
+    }
+  }
+}

@@ -18,7 +18,7 @@ function tweetHandler(tweets) {
   }
   tweetsOutput += '</ul>';
 
-  $('.tweet-list').html(tweetsOutput);
+  $('#tweet-list').html(tweetsOutput);
 }
 
 twitterFetcher.fetch(twitterConfig);

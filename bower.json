@@ -1,0 +1,17 @@
+{
+  "name": "mallum",
+  "version": "0.0.1",
+  "authors": [
+    "Tony Estrada <aestrada7@outlook.com>"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.2"
+  },
+  "exportsOverride": {
+    "foundation": {
+      "js": "js",
+      "js/foundation": "js/foundation",
+      "scss": "scss"
+    }
+  }
+}

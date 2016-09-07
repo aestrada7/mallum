@@ -35,7 +35,7 @@ $weight-bold: 600;
 $weight-extra-bold: 700;
 
 // Fonts
-$font-family-sans-serif: 'Helvetica';
+$font-family-sans-serif: 'Open Sans', 'Helvetica';
 $font-family-serif: 'Georgia';
 
 // Background colors
@@ -55,5 +55,5 @@ $border-color-inverse: #333333;
 $border-color-pitch-black: #202020;
 
 // Transitions
-$transition-time: 350ms;
-$global-transition: #{$transition-time} ease-in;
+$transition-time: 150ms;
+$global-transition: #{$transition-time} ease-in-out;
