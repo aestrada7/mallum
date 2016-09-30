@@ -14,15 +14,21 @@ main-menu {
 
   &.scrolled {
     position: fixed;
-    background-color: $background-inverse-light;
+    background-color: $background-white;
     padding-top: rem-calc(10);
     padding-bottom: rem-calc(10);
+
+    .menu-item {
+      a {
+        color: $text-color-medium;
+      }
+    }
   }
 
   .menu-item {
     a {
       transition: all $global-transition;
-      color: $text-color-inverse;
+      color: $text-color-white;
       border-bottom: 1px solid transparent;
       padding-bottom: rem-calc(5);
       text-transform: uppercase;
@@ -30,16 +36,21 @@ main-menu {
       will-change: border-bottom, padding-bottom;
 
       &:hover {
-        color: $text-color-white;
+        color: $accent-1;
         padding-bottom: 0;
-        border-bottom: 1px solid $white;
+        border-bottom: 1px solid $accent-1;
       }
     }
+  }
+
+  img {
+    max-width: rem-calc(230);
   }
 }
 
 .splash {
-  background-image: url('../img/header-bg.jpg');
+  background-image: url('../img/main-bg.jpg');
+  background-size: cover;
   width: 100%;
   height: rem-calc(300);
 
@@ -51,7 +62,7 @@ main-menu {
     margin: 0;
     padding-top: rem-calc(110);
     width: 100%;
-    color: $text-color-white;
+    color: $accent-1;
     font-size: $font-size-large;
     text-align: center;
 

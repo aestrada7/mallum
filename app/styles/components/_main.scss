@@ -7,11 +7,12 @@ body {
 button {
   &.outline {
     &.accent-1 {
+      color: $accent-1;
       border: 2px solid $accent-1;
       background-color: transparent;
 
       &:hover {
-        background-color: $background-inverse-light;
+        background-color: $background-white;
       }
     }
   }
